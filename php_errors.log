@@ -1,0 +1,7 @@
+[26-Dec-2017 19:12:20 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/1.1. Введение в PHP/about.php on line 3
+[26-Dec-2017 19:12:20 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/1.1. Введение в PHP/about.php on line 3
+[26-Dec-2017 19:16:14 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/1.1/about.php on line 3
+[26-Dec-2017 19:16:58 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/1.1/about.php on line 2
+[26-Dec-2017 19:17:55 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/1.1/about.php on line 2
+[26-Dec-2017 19:31:49 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/1.1/about.php on line 3
+[26-Dec-2017 19:32:24 UTC] PHP Parse error:  syntax error, unexpected 'utf' (T_STRING) in /home/ubuntu/workspace/1.1/about.php on line 4
