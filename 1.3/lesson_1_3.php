@@ -101,6 +101,7 @@
                 }
             }
         }
+        echo '</br>'.'</br>';
     }
     
     // Выводим первоначальный массив реальных животных
@@ -122,4 +123,5 @@
     // Выводим животных в нужном формате
     printNewFormat($animalsTwoWordRandom);
     
+    echo "<img src=New_Year.jpeg>"; 
 ?>
