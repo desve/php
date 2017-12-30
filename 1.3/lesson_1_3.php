@@ -124,4 +124,5 @@
     printNewFormat($animalsTwoWordRandom);
     
     echo "<img src=New_Year.jpeg>"; 
+    
 ?>
