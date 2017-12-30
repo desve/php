@@ -1,5 +1,4 @@
 <?php header('Content-Type: text/html; charset=utf-8');
-
     echo 'Домашнее задание к лекции 1.3 «Строки, массивы и объекты»'.'</br>'.'</br>';
     
     // Задаем массив
