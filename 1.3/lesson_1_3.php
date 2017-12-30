@@ -87,6 +87,21 @@
         echo '</br>';
     }
     
+    function printNewFormat(&$animalsTwoWordRandom) {
+        // Выводим животных в нужном формате
+        foreach ($animalsTwoWordRandom as $keyContinent => $animals) {
+            echo '<h2>'.'Континент '.$keyContinent.'</h2>';
+            $animalCount = count($animals);
+            foreach ($animals as $key => $animal) {
+                if ($key < $animalCount - 1) {
+                    echo $animal.', ';
+                }
+                else {
+                    echo $animal;
+                }
+            }
+        }
+    }
     
     // Выводим первоначальный массив реальных животных
     echo 'Первоначальный массив реальных животных'.'</br>';
@@ -105,16 +120,6 @@
     // Дополнительно
     echo 'Дополнительно'.'</br>'.'</br>';
     // Выводим животных в нужном формате
-    foreach ($animalsTwoWordRandom as $keyContinent => $animals) {
-        echo '<h2>'.'Континент '.$keyContinent.'</h2>';
-        $animalCount = count($animals);
-        foreach ($animals as $key => $animal) {
-            if ($key < $animalCount - 1) {
-                echo $animal.', ';
-            }
-            else {
-                echo $animal;
-            }
-        }
-    }
+    printNewFormat($animalsTwoWordRandom);
+    
 ?>
