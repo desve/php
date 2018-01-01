@@ -114,4 +114,5 @@
     // Выводим животных в нужном формате
     printNewFormat($animalsTwoWordRandom);
 
+
 ?>
