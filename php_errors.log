@@ -584,3 +584,6 @@
 [05-Jan-2018 12:06:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/1.4/lesson_1_4.1.php:0
 [05-Jan-2018 12:06:14 UTC] PHP   2. getActualWeather() /home/ubuntu/workspace/1.4/lesson_1_4.1.php:73
 [05-Jan-2018 12:06:14 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/1.4/lesson_1_4.1.php:39
+[09-Jan-2018 15:27:35 UTC] PHP Fatal error:  Call to undefined function war_dump() in /home/ubuntu/workspace/1.4/lesson_1_4.2.php on line 58
+[09-Jan-2018 15:27:35 UTC] PHP Stack trace:
+[09-Jan-2018 15:27:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/1.4/lesson_1_4.2.php:0
