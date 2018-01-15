@@ -587,3 +587,62 @@
 [09-Jan-2018 15:27:35 UTC] PHP Fatal error:  Call to undefined function war_dump() in /home/ubuntu/workspace/1.4/lesson_1_4.2.php on line 58
 [09-Jan-2018 15:27:35 UTC] PHP Stack trace:
 [09-Jan-2018 15:27:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/1.4/lesson_1_4.2.php:0
+[10-Jan-2018 10:52:50 UTC] PHP Parse error:  syntax error, unexpected '{', expecting ']' in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 6
+[10-Jan-2018 10:53:20 UTC] PHP Parse error:  syntax error, unexpected '{', expecting ']' in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 6
+[10-Jan-2018 10:56:05 UTC] PHP Parse error:  syntax error, unexpected '{', expecting ']' in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 6
+[10-Jan-2018 10:56:23 UTC] PHP Parse error:  syntax error, unexpected '{', expecting ']' in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 5
+[10-Jan-2018 11:00:12 UTC] PHP Parse error:  syntax error, unexpected '{', expecting ']' in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 6
+[10-Jan-2018 11:06:09 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 31
+[10-Jan-2018 11:06:09 UTC] PHP Stack trace:
+[10-Jan-2018 11:06:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:06:09 UTC] PHP   2. json_decode() /home/ubuntu/workspace/2.1/lesson_2_1.php:31
+[10-Jan-2018 11:06:09 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 32
+[10-Jan-2018 11:06:09 UTC] PHP Stack trace:
+[10-Jan-2018 11:06:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:06:09 UTC] PHP   2. json_decode() /home/ubuntu/workspace/2.1/lesson_2_1.php:32
+[10-Jan-2018 11:19:22 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 31
+[10-Jan-2018 11:19:22 UTC] PHP Stack trace:
+[10-Jan-2018 11:19:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:19:22 UTC] PHP   2. json_decode() /home/ubuntu/workspace/2.1/lesson_2_1.php:31
+[10-Jan-2018 11:19:22 UTC] PHP Warning:  file_put_contents() expects parameter 1 to be a valid path, resource given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 35
+[10-Jan-2018 11:19:22 UTC] PHP Stack trace:
+[10-Jan-2018 11:19:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:19:22 UTC] PHP   2. file_put_contents() /home/ubuntu/workspace/2.1/lesson_2_1.php:35
+[10-Jan-2018 11:19:22 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 39
+[10-Jan-2018 11:19:22 UTC] PHP Stack trace:
+[10-Jan-2018 11:19:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:19:22 UTC] PHP   2. json_decode() /home/ubuntu/workspace/2.1/lesson_2_1.php:39
+[10-Jan-2018 11:22:05 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 31
+[10-Jan-2018 11:22:05 UTC] PHP Stack trace:
+[10-Jan-2018 11:22:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:22:05 UTC] PHP   2. json_decode() /home/ubuntu/workspace/2.1/lesson_2_1.php:31
+[10-Jan-2018 11:22:05 UTC] PHP Warning:  file_put_contents() expects parameter 1 to be a valid path, resource given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 35
+[10-Jan-2018 11:22:05 UTC] PHP Stack trace:
+[10-Jan-2018 11:22:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:22:05 UTC] PHP   2. file_put_contents() /home/ubuntu/workspace/2.1/lesson_2_1.php:35
+[10-Jan-2018 11:22:05 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 39
+[10-Jan-2018 11:22:05 UTC] PHP Stack trace:
+[10-Jan-2018 11:22:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:22:05 UTC] PHP   2. json_decode() /home/ubuntu/workspace/2.1/lesson_2_1.php:39
+[10-Jan-2018 11:22:26 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 31
+[10-Jan-2018 11:22:26 UTC] PHP Stack trace:
+[10-Jan-2018 11:22:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:22:26 UTC] PHP   2. json_decode() /home/ubuntu/workspace/2.1/lesson_2_1.php:31
+[10-Jan-2018 11:22:26 UTC] PHP Warning:  file_put_contents() expects parameter 1 to be a valid path, resource given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 35
+[10-Jan-2018 11:22:26 UTC] PHP Stack trace:
+[10-Jan-2018 11:22:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:22:26 UTC] PHP   2. file_put_contents() /home/ubuntu/workspace/2.1/lesson_2_1.php:35
+[10-Jan-2018 11:23:05 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 35
+[10-Jan-2018 11:23:05 UTC] PHP Stack trace:
+[10-Jan-2018 11:23:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:23:05 UTC] PHP   2. json_decode() /home/ubuntu/workspace/2.1/lesson_2_1.php:35
+[10-Jan-2018 11:23:05 UTC] PHP Warning:  file_put_contents() expects parameter 1 to be a valid path, resource given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 35
+[10-Jan-2018 11:23:05 UTC] PHP Stack trace:
+[10-Jan-2018 11:23:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:23:05 UTC] PHP   2. file_put_contents() /home/ubuntu/workspace/2.1/lesson_2_1.php:35
+[10-Jan-2018 11:25:59 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 31
+[10-Jan-2018 11:25:59 UTC] PHP Stack trace:
+[10-Jan-2018 11:25:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/2.1/lesson_2_1.php:0
+[10-Jan-2018 11:25:59 UTC] PHP   2. json_decode() /home/ubuntu/workspace/2.1/lesson_2_1.php:31
+[10-Jan-2018 13:10:46 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 63
+[10-Jan-2018 13:20:26 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/ubuntu/workspace/2.1/lesson_2_1.php on line 65
