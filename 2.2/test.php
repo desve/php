@@ -1,8 +1,5 @@
 <?php header('Content-Type: text/html; charset=utf-8');
 
-    echo time( );
-    echo "</br>";
-
     // Читаем информацию из list.php  
     $fileListName = 'list.php';         // имя файла с названиями тестов
     $tests = file($fileListName);       // получаем массив с названиями тестов
@@ -44,6 +41,8 @@
         // Генерируем случайный вопрос
         $questionN = rand(1, count($dataFromJson)) - 1;
         //$questionNumber = $questionN;
+        // со случайным вопросом так и не смог разобраться
+        // при каждом выборе он заново обновляется и старый выбор теряется
         $questionNumber = $_GET["testСhoice"];
         $questionAnimal = $dataFromJson[$questionNumber][1];
         // Задаем форму ввода
