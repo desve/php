@@ -1,6 +1,5 @@
-<!-- Домашнее задание к лекции 2.2 «Обработка форм» -->
-
 <?php header('Content-Type: text/html; charset=utf-8');
+    echo 'Курс PHP/SQL: back-end разработка и базы данных<br><br>';
 
     function cleanDir($dirName) {
         // Проверяем наличие файлов в директории
@@ -35,20 +34,22 @@
 
 <?php 
     // Пересылаем выбранные файлы на сервер
-    $fileList = 'list.php';                 // записываем сюда выбранные тесты
-    $fileOpen = fopen($fileList, 'w');      // открываем файл для записи
     if (isset($_FILES)) {
         foreach ($_FILES as $key => $value) {
             $valueName = $value['name'];
             if (move_uploaded_file($value['tmp_name'], "{$dirServer}/{$valueName}")) {
                 echo "Файл {$valueName} записан на сервер</br>";
-                file_put_contents($fileList, "{$valueName}\n", FILE_APPEND);      // записываем
-                echo "Имя теста {$valueName} записано в файл {$fileList}</br>";
             }
             else {
                 echo "Файл НЕ передан.</br>";
             }
         }
-        fclose($fileOpen);      // закрываем файл
     }
 ?>
+
+<form method="POST" action="list.php" name="form">
+    <br>Продолжим
+    <input type="submit" name="submit" value="Продолжим">
+</form>
+
+

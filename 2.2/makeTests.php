@@ -1,8 +1,6 @@
 <?php header('Content-Type: text/html; charset=utf-8');
-    echo 'Домашнее задание к лекции 2.2. Обработка форм</br></br>';
-    
-    // Записываем на диск наши тесты
-    echo 'Записываем на диск наши тесты</br>';
+    echo 'Курс PHP/SQL: back-end разработка и базы данных<br><br>';
+
     // Задаем массивы тестов
     $animalsContinent = [
         'Africa' => [
@@ -65,7 +63,7 @@
     }
     echo "Тесты созданы</br>";
     
-    // Проверяем наличие и сохдаем вспомогательную директорию server
+    // Проверяем наличие и сохдаем директорию server
     $dirServerName = 'server';       // имя директории
     if (is_dir($dirServerName)) {
         echo "Директория {$dirServerName} существует</br>";
@@ -74,7 +72,9 @@
         echo "Директории {$dirServerName} НЕ существует. Создаем</br>";
         mkdir($dirServerName);
     }
-    
-    
-    
 ?>
+
+<form method="POST" action="admin.php" name="form">
+    <br>Продолжем подготовку к тестированию
+    <input type="submit" name="submit" value="Продолжить">
+</form>

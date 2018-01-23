@@ -1,86 +1,89 @@
 <?php header('Content-Type: text/html; charset=utf-8');
-
-    // Читаем информацию из list.php  
-    $fileListName = 'list.php';         // имя файла с названиями тестов
-    $tests = file($fileListName);       // получаем массив с названиями тестов
-    $countTest = count($tests);         // количество тестов
-    echo "Загружено на сервер тестов - {$countTest}<br>";
-    foreach ($tests as $key => $test) {
-        echo "- {$test}</br>";
-    }
-    echo "</br>";
-?>
-
-<form method="GET" name="form">
-    Выберете номер теста <input type="number" name="testСhoice" min="0" max="<?= $countTest ?>" value="0">
-    <input type="submit" value="Пройти тест">
-</form>    
-
-
-<?php
-
-    if ($_GET["testСhoice"]) {
-        // Считываем и декодируем полученный тест с server
-        $fileName = trim($tests[$_GET["testСhoice"]-1]);            // файл с тестом
-        $continent = strstr($tests[$_GET["testСhoice"]-1], '.', true);
-        $dir = dirname(__FILE__);                                   // определяем текущую директорию
-        $dirServer = "{$dir}/server";                               // путь к серверу 
-        $filePath = "{$dirServer}/{$fileName}";                     // путь к файлу (тесту)
-        $fileInfo = fopen($filePath, 'r');                  // открываем файл
-        $info = file_get_contents($filePath);               // получаем json
-        fclose($fileInfo);                                  // закрываем файл
-        $dataFromJson=json_decode($info, true);             // декодируем в массив
-        echo "Считываем и декодируем файл {$fileName}</br>"; 
-
-        $questionAnimal = $dataFromJson[$questionNumber][1];
-        // echo '<pre>';
-        // print_r($dataFromJson);
-        // echo '</br>';
+    echo 'Курс PHP/SQL: back-end разработка и базы данных<br><br>';
     
-        echo "Тест номер {$_GET["testСhoice"]}: Животные. Континент - {$continent}</br>";
-        // Генерируем случайный вопрос
-        $questionN = rand(1, count($dataFromJson)) - 1;
-        //$questionNumber = $questionN;
-        // со случайным вопросом так и не смог разобраться
-        // при каждом выборе он заново обновляется и старый выбор теряется
-        $questionNumber = $_GET["testСhoice"];
-        $questionAnimal = $dataFromJson[$questionNumber][1];
-        // Задаем форму ввода
-        echo "<form method='POST' name='test'>";
-        echo "Как по латыни называется {$questionAnimal}?  "; 
-        echo "<select name='animal'>";
-            echo "<option value=0> Сделайте свой выбор";
-            foreach ($dataFromJson as $key => $item) {
-                echo "<option value={$key}+1> {$item[0]}";     
-            }
-            echo "</select>";
-        echo "<input type='submit' value='Выбор сделан'>";
-        echo "</form>";
-        
-        //echo print_r($_POST);
-        
-        if($_POST['animal']) {
-            // Находим и выводим правильный ответ
-            $answer = intval($_POST['animal']);
-            $latin = $dataFromJson[$answer][0];
-            echo "Ваш выбор {$latin}</br>";
-            $russian = $dataFromJson[$answer][1];
-            echo "{$latin} переводится как {$russian}</br>";  
-            foreach ($dataFromJson as $data) {
-                if ($data[1] === $questionAnimal) {
-                    echo "Правильный ответ {$data[0]}";
-                }
-            }
+    function enumerator($file) {
+        //  Счетчик баллов
+        if($file) {
+            $register = file_get_contents($file);   
+            $register++; 
         }
         else {
-            echo "Сделайте свой выбор";  
+            $register = 1;
+        }
+        file_put_contents($file, $register);
+        
+        return $register;
+    }
+
+    // Считываем и декодируем полученный тест с server
+    $fileName = $_GET['test'];                  // файл с тестом
+    // Получаем информацию с сервера
+    $continent = strstr($fileName, '.', true);
+    $dir = dirname(__FILE__);                   // определяем текущую директорию
+    $dirServer = "{$dir}/server";               // путь к серверу 
+    $filePath = "{$dirServer}/{$fileName}";     // путь к файлу (тесту)       
+    echo "Считываем и декодируем файл {$fileName}</br>"; 
+    $info = file_get_contents($filePath);       // получаем json
+    $dataFromJson=json_decode($info, true);     // декодируем в массив
+    // echo '<pre>';
+    // print_r($dataFromJson);
+    // echo '<br>';
+    echo "Тест на знание латыни: Животные. Континент - {$continent}</br>";
+    // Случайный вопрос
+    $question = $dataFromJson[$_GET['random']][1];
+    // Задаем форму ввода
+    echo "<form method='POST' name='test_2'>";
+        echo "Как по латыни называется {$question}?  "; 
+        echo "<select name='animal'>";
+        echo "<option value='-1'> Сделайте свой выбор";
+        foreach ($dataFromJson as $key => $item) {
+            echo "<option value={$key}> {$item[0]}";     
+        }
+        echo "</select>";
+        echo "<input type='submit' value='Выбор сделан' name='enter'>";
+    echo "</form>";
+    //var_dump($_POST);
+
+    // Результат теста
+    if (empty($_POST)) {
+        $choice = -1;
+    }
+    else {
+        $choice = (int)$_POST['animal'];  // выбор
+    }
+
+    if ($choice >= 0) {
+        $answer = $dataFromJson[$choice][0];
+        echo "Ваш выбор {$answer}<br>";
+        echo "{$answer} переводится как ";
+        echo "{$dataFromJson[$choice][1]}<br>";
+        $answerTrue = $dataFromJson[$_GET['random']][0];
+        echo "Правильный ответ {$answerTrue}<br>";
+        if ($answer == $answerTrue) {
+            $points = enumerator('points.txt');  // записываем успехи
+            echo "Ответ правильный. Вы получаете 1 балл<br>";
+            echo "У Вас уже {$points} балл(ов)";
+        }
+        else {
+            echo "Ответ Не правильный. Вы получаете 0 баллов";
         }
     }
     else {
-        echo "Выберете номер теста";
+        echo "Сделайте свой выбор";
     }
-
+    
 ?>
+
+    <form method="POST" action="list.php" name="form">
+        <br>Переходим к новому тесту?<input type="submit" name="submit" value="Новый тест">
+    </form>
+    
+    <form method="POST" action="../2.3/input.php" name="form">
+        <br>Закончить тестирование?<input type="submit" name="submit" value="Exit">
+    </form>
+
+    
+
     
     
 
