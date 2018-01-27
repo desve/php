@@ -99,24 +99,22 @@
     }
     
     echo "<br><br>Класс Авто в ремонт<br>";
+    
     $car1 = new GetCarRepair(123456789, 2017, 'Mazda');
     echo "<br>Стоимость Вашего ремонта {$car1->price()}";
     $carsRepair = GetCarRepair::$counter;
     echo "<br>Сдано автомобилей в аренду: {$carsRepair}";
 
-    echo "<br><br>Класс Авто в ремонт<br>";
     $car2 = new GetCarRepair(123456789, 2016, 'Audi');
     echo "<br>Стоимость Вашего ремонта {$car2->price()}";
     $carsRepair = GetCarRepair::$counter;
     echo "<br>Сдано автомобилей в аренду: {$carsRepair}";
-    
-    echo "<br><br>Класс Авто в ремонт<br>";
+
     $car3 = new GetCarRepair(123456789, 2015, 'BMW');
     echo "<br>Стоимость Вашего ремонта {$car3->price()}";
     $carsRepair = GetCarRepair::$counter;
     echo "<br>Сдано автомобилей в аренду: {$carsRepair}";
-    
-    echo "<br><br>Класс Авто в ремонт<br>";
+
     $car4 = new GetCarRepair(123456789, 2015, 'Niva');
     echo "<br>Стоимость Вашего ремонта {$car4->price()}";
     $carsRepair = GetCarRepair::$counter;
