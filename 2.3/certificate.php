@@ -1,7 +1,7 @@
 <?php header('Content-Type: text/html; charset=utf-8');
 
     // Генерируем сертификат с результатами
-    $fileResult = "../2.2/points.txt";
+    $fileResult = "points.txt";
     $result = file_get_contents($fileResult);   // результат
     $name = $_POST['userName'];                 // имя
     $sex = $_POST['sex'];                       // пол

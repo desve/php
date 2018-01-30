@@ -3,8 +3,8 @@
 
     // Выполняем редирект
     //$URL = "https://php-sql-v-ladimir.c9users.io";
-    $URL = "http://university.netology.ru/u/desiyatov/";
-    $goToURL = $URL."/2.2";
+    //$URL = "http://university.netology.ru/u/desiyatov/2.3";
+    $goToURL = 'list.php';
     header("Location: {$goToURL}");
     
 ?>
