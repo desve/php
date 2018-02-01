@@ -155,17 +155,18 @@
         }
     }
     
+    // Вроде все инкапсулировалось:)
     // #1-1
     $car1 = new CarRent('Иван', 'Mazda', 2014);
     $car1->outputTitles('№ 1')->go();
     // #1-2
     $car2 = new CarRent('Петр', 'Audi', 2018);
-    $car2->getDiscount(5);
+    $car2->getDiscount(5);      // меняем размер скидки
     $car2->outputTitles('№ 2')->go();
     // #1-3
     $car3 = new CarRent('Максим', 'Niva', 2008);
-    $car3->getDiscount(10);
-    $car3->getPrivateCost();  // выводим служебную информацию
+    $car3->getDiscount(10);     // меняем размер скидки
+    $car3->getPrivateCost();    // выводим служебную информацию
     $car3->outputTitles('№ 3')->go();
     
     // #2-1
@@ -204,10 +205,5 @@
     $signature3->direction = 'left';        // переопределим направление дыижения
     $signature3->behavior = 'slide';        // переопределим тип движения
     $signature3->outputTitles('Пример 3')->go();
-    
-    
-    
-    
-    
     
 ?>
